@@ -1,0 +1,50 @@
+/* Variables */
+:root {
+  /* Define color palette first */
+  --yellow: hsl(47, 88%, 63%);
+  --gray-950: hsl(0, 0%, 7%);
+  --gray-500: hsl(0, 0%, 42%);
+  --white: hsl(0, 0%, 100%);
+  --blue-500: hsl(228, 45%, 44%);
+  
+  /* Then define semantic usage */
+  --text-primary: var(--gray-950);
+  --text-secondary: var(--gray-500);
+  --background: var(--yellow);
+  --card-background: var(--white);
+  --link-color: var(--blue-500);
+  --shadow-color: hsla(0, 0%, 0%, 1);
+
+  /* Shadow presets */
+  --shadow: 0px 25px 25px 0px var(--shadow-color);
+
+  /* Typograpy presets */
+  --font-family: 'Outfit', sans-serif;
+  --text-preset-1: 700 22px/120% var(--font-family);
+  --text-preset-2: 400 15px/140% var(--font-family);
+  --text-preset-3: 400 11px/normal var(--font-family);
+  --letter-spacing-tight: 0px;
+  --letter-spacing-wide: 0.2px;
+
+  /* Spacing scale */
+  --spacing-500: 40px;
+  --spacing-300: 24px;
+  --spacing-200: 16px;
+
+  /* Border radius scale */
+  --border-radius-500: 20px;
+  --border-radius-300: 10px;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
