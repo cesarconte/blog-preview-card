@@ -19,21 +19,26 @@
   --shadow: 0px 25px 25px 0px var(--shadow-color);
 
   /* Typograpy presets */
-  --font-family: 'Outfit', sans-serif;
-  --text-preset-1: 700 22px/120% var(--font-family);
-  --text-preset-2: 400 15px/140% var(--font-family);
-  --text-preset-3: 400 11px/normal var(--font-family);
-  --letter-spacing-tight: 0px;
-  --letter-spacing-wide: 0.2px;
+  --font-family: 'Figtree', sans-serif;
+  --text-preset-1: 800 24px/150% var(--font-family);
+  --text-preset-2: 500 16px/150% var(--font-family);
+  --text-preset-3: 400 14px/150% var(--font-family);
+  --text-preset-3__bold: 800 14px/150% var(--font-family);
 
   /* Spacing scale */
-  --spacing-500: 40px;
   --spacing-300: 24px;
-  --spacing-200: 16px;
+  --spacing-150: 12px;
+  --spacing-100: 8px;
+  --spacing-50: 4px;
 
   /* Border radius scale */
   --border-radius-500: 20px;
   --border-radius-300: 10px;
+  --border-radius-100: 4px;
+
+  /* Width scale */
+  --width-300: 384px;
+  --width-100: 327px;
 }
 
 /* Reset */
