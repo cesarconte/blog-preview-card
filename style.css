@@ -1,13 +1,13 @@
 /* Variables */
 :root {
-  /* Define color palette first */
+  /* Colors */
   --yellow: hsl(47, 88%, 63%);
   --gray-950: hsl(0, 0%, 7%);
   --gray-500: hsl(0, 0%, 42%);
   --white: hsl(0, 0%, 100%);
   --blue-500: hsl(228, 45%, 44%);
-  
-  /* Then define semantic usage */
+
+  /* Semantic colors */
   --text-primary: var(--gray-950);
   --text-secondary: var(--gray-500);
   --background: var(--yellow);
@@ -15,10 +15,10 @@
   --link-color: var(--blue-500);
   --shadow-color: hsla(0, 0%, 0%, 1);
 
-  /* Shadow presets */
-  --shadow: 0px 25px 25px 0px var(--shadow-color);
+  /* Shadow */
+  --shadow: 8px 8px 0 var(--shadow-color);
 
-  /* Typograpy presets */
+  /* Typography */
   --font-family: 'Figtree', sans-serif;
   --text-preset-1: 800 24px/150% var(--font-family);
   --text-preset-2: 500 16px/150% var(--font-family);
@@ -52,4 +52,154 @@
 
 * {
   -webkit-font-smoothing: antialiased;
+}
+
+/* Base */
+body {
+  color: var(--text-primary);
+  background-color: var(--background);
+  min-height: 100svh;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100svh;
+}
+
+/* Reset img from Harry Roberts - @csswizardry */
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 1rem;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+/** Card Container **/
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--spacing-300);
+  width: 100%;
+  max-width: var(--width-300);
+  margin-inline: var(--spacing-300);
+  padding: var(--spacing-300);
+  background-color: var(--card-background);
+  border: 1px solid var(--gray-950);
+  border-radius: var(--border-radius-500);
+  box-shadow: var(--shadow);
+}
+
+/* Card Image */
+.card__img {
+  border-radius: var(--border-radius-300);
+  object-fit: cover;
+}
+
+/* Card Content */
+.card__content,
+.card__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-150);
+}
+
+.card__content {
+  padding: 0;
+}
+
+/* Card Header */
+.card__category {
+  display: inline-flex;
+  gap: var(--spacing-100);
+  padding: var(--spacing-50) var(--spacing-150);
+  border-radius: var(--border-radius-100);
+  background-color: var(--yellow);
+  font: var(--text-preset-3__bold);
+}
+
+.card__publish,
+.card__publish-date {
+  font: var(--text-preset-3);
+}
+
+/* Card Title & Description */
+.card__title {
+  font: var(--text-preset-1);
+}
+
+.card__title:hover {
+  color: var(--yellow);
+  cursor: pointer;
+}
+
+.card__description {
+  font: var(--text-preset-2);
+  color: var(--text-secondary);
+}
+
+/* Card Author */
+.card__author {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: var(--spacing-150);
+  font: var(--text-preset-3__bold);
+}
+
+.card__author-img {
+  width: 32px;
+  height: auto;
+  border-radius: 50%;
+}
+
+/** Footer **/
+footer {
+  width: 100%;
+  text-align: center;
+  padding: var(--spacing-100);
+  font: var(--text-preset-3);
+  color: var(--text-primary);
+}
+
+/* Media Queries */
+@media screen and (max-width: 480px) {
+  .card__category,
+  .card__publish,
+  .card__publish-date,
+  .card__title,
+  .card__description {
+    line-height: 150%;
+  }
+
+  .card__category {
+    font-size: 12px;
+  }
+
+  .card__publish,
+  .card__publish-date {
+    font-size: 12px;
+  }
+
+  .card__title {
+    font-size: 20px;
+  }
+
+  .card__description {
+    font-size: 14px;
+  }
+
+  .card__img {
+    height: 200px;
+  }
 }
