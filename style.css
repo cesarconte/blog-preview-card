@@ -6,6 +6,7 @@
   --gray-500: hsl(0, 0%, 42%);
   --white: hsl(0, 0%, 100%);
   --blue-500: hsl(228, 45%, 44%);
+  --violet-600: hsl(252, 78%, 60%);
 
   /* Semantic colors */
   --text-primary: var(--gray-950);
@@ -13,6 +14,7 @@
   --background: var(--yellow);
   --card-background: var(--white);
   --link-color: var(--blue-500);
+  --link-color-hover: var(--violet-600);
   --shadow-color: hsla(0, 0%, 0%, 1);
 
   /* Shadow */
@@ -201,7 +203,12 @@ footer a {
   transition: color var(--transition-default);
 }
 
+footer a:hover,
+footer a:active {
+  color: var(--link-color-hover);
+}
+
 footer a:focus-visible {
-  outline: 2px solid var(--gray-950);
+  outline: 2px solid var(--link-color);
   outline-offset: 2px;
 }
