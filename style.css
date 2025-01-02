@@ -20,10 +20,18 @@
 
   /* Typography */
   --font-family: 'Figtree', sans-serif;
-  --text-preset-1: 800 24px/150% var(--font-family);
-  --text-preset-2: 500 16px/150% var(--font-family);
-  --text-preset-3: 400 14px/150% var(--font-family);
-  --text-preset-3__bold: 800 14px/150% var(--font-family);
+  --text-preset-1: 800
+    clamp(20px, calc(20px + (24 - 20) * ((100vw - 375px) / (1440 - 375))), 24px) /
+    150% var(--font-family);
+  --text-preset-2: 500
+    clamp(14px, calc(14px + (16 - 14) * ((100vw - 375px) / (1440 - 375))), 16px) /
+    150% var(--font-family);
+  --text-preset-3: 400
+    clamp(12px, calc(12px + (14 - 12) * ((100vw - 375px) / (1440 - 375))), 14px) /
+    150% var(--font-family);
+  --text-preset-3__bold: 800
+    clamp(12px, calc(12px + (14 - 12) * ((100vw - 375px) / (1440 - 375))), 14px) /
+    150% var(--font-family);
 
   /* Spacing scale */
   --spacing-300: 24px;
@@ -193,23 +201,6 @@ footer a:focus-visible {
 
 /* Media Queries */
 @media screen and (max-width: 480px) {
-  .card__category,
-  .card__publish,
-  .card__publish-date {
-    font-size: 12px;
-    line-height: 150%;
-  }
-
-  .card__title {
-    font-size: 20px;
-    line-height: 150%;
-  }
-
-  .card__description {
-    font-size: 14px;
-    line-height: 150%;
-  }
-
   .card__img {
     height: 200px;
   }
