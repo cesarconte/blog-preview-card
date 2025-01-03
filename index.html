@@ -41,13 +41,8 @@
         <section class="card__content">
           <!-- Card header with category and publish date -->
           <header class="card__header">
-            <!-- Category tag using role="text" for accessibility -->
             <div>
-              <span
-                class="card__category"
-                role="text"
-                >Learning</span
-              >
+              <span class="card__category">Learning</span>
             </div>
             <!-- Publication date using semantic time element -->
             <p class="card__publish">
@@ -62,26 +57,30 @@
           </header>
 
           <!-- Article title with ID for aria-labelledby reference -->
-          <h1
+          <!-- Change h1 to h2 for proper hierarchy -->
+          <h2
             class="card__title"
             id="article-title">
             HTML & CSS foundations
-          </h1>
+          </h2>
           <p class="card__description">
             These languages are the backbone of every website, defining
             structure, content, and presentation.
           </p>
-        </section>
 
-        <!-- Author info section using contentinfo role -->
-        <section
-          class="card__author"
-          role="contentinfo">
-          <img
-            src="./assets/images/image-avatar.webp"
-            alt="Greg's Hooper avatar"
-            class="card__author-img" />
-          <p class="card__author-name">Greg Hooper</p>
+          <!-- Add heading to author section -->
+          <section
+            class="card__author"
+            role="contentinfo">
+            <h3 class="visually-hidden">Article Author</h3>
+            <img
+              src="./assets/images/image-avatar.webp"
+              alt="Greg's Hooper avatar"
+              class="card__author-img"
+              width="32"
+              height="32" />
+            <span class="card__author-name">Greg Hooper</span>
+          </section>
         </section>
       </article>
     </main>
