@@ -70,21 +70,6 @@
   -webkit-font-smoothing: antialiased;
 }
 
-/* Base */
-body {
-  color: var(--text-primary);
-  background-color: var(--background);
-  min-height: 100svh;
-  font-family: var(--font-family);
-}
-
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100svh;
-}
-
 /* Reset img from Harry Roberts - @csswizardry */
 img {
   max-width: 100%;
@@ -94,6 +79,27 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   shape-margin: 1rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Body */
+body {
+  color: var(--text-primary);
+  background-color: var(--background);
+  min-height: 100svh;
+  font-family: var(--font-family);
+}
+
+/* Main Container */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100svh;
 }
 
 /** Card Container **/
@@ -118,11 +124,12 @@ img {
 }
 
 /* Card Image */
-.card__img {
-  border-radius: var(--border-radius-300);
-  object-fit: cover;
+.card__img-img {
+  max-width: 100%;
   height: 200px;
-}       
+  object-fit: cover;
+  border-radius: var(--border-radius-300);
+}
 
 /* Card Content */
 .card__content,
@@ -144,11 +151,6 @@ img {
   border-radius: var(--border-radius-100);
   background-color: var(--yellow);
   font: var(--text-preset-3__bold);
-}
-
-.card__category:hover {
-  background-color: var(--text-primary);
-  color: var(--yellow);
 }
 
 .card__publish,
