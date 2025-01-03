@@ -16,9 +16,11 @@
   --link-color: var(--blue-500);
   --link-color-hover: var(--violet-600);
   --shadow-color: hsla(0, 0%, 0%, 1);
+  --shadow-color-hover: hsla(0, 0%, 0%, 0.5);
 
   /* Shadow */
   --shadow: 8px 8px 0 var(--shadow-color);
+  --shadow-on-hover: 8px 8px 0 var(--shadow-color-hover);
 
   /* Typography */
   --font-family: 'Figtree', sans-serif;
@@ -108,11 +110,11 @@ img {
   border: 1px solid var(--gray-950);
   border-radius: var(--border-radius-500);
   box-shadow: var(--shadow);
-  transition: transform var(--transition-default);
+  transition: box-shadow var(--transition-default);
 }
 
 .card:hover {
-  transform: translateY(-4px);
+  box-shadow: var(--shadow-on-hover);
 }
 
 /* Card Image */
@@ -120,7 +122,7 @@ img {
   border-radius: var(--border-radius-300);
   object-fit: cover;
   height: 200px;
-}
+}       
 
 /* Card Content */
 .card__content,
@@ -142,6 +144,11 @@ img {
   border-radius: var(--border-radius-100);
   background-color: var(--yellow);
   font: var(--text-preset-3__bold);
+}
+
+.card__category:hover {
+  background-color: var(--text-primary);
+  color: var(--yellow);
 }
 
 .card__publish,
@@ -177,12 +184,23 @@ img {
 
 .card__author-name {
   font: var(--text-preset-3__bold__fixed);
+  transition: transform var(--transition-default);
+}
+
+.card__author-name:hover {
+  transform: translateX(2px);
+  cursor: pointer;
 }
 
 .card__author-img {
   width: 32px;
   height: auto;
   border-radius: 50%;
+  transition: transform var(--transition-default);
+}
+
+.card__author-img:hover {
+  transform: scale(1.2);
 }
 
 /** Footer **/
