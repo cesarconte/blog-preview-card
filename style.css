@@ -102,6 +102,16 @@ main {
   height: 100svh;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
 /** Card Container **/
 .card {
   display: flex;
@@ -145,8 +155,7 @@ main {
 
 /* Card Header */
 .card__category {
-  display: inline-flex;
-  gap: var(--spacing-100);
+  width: fit-content;
   padding: var(--spacing-50) var(--spacing-150);
   border-radius: var(--border-radius-100);
   background-color: var(--yellow);
