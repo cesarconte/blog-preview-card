@@ -5,8 +5,12 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Blog preview card" />
-    <meta name="author" content="César Conte" />
+    <meta
+      name="description"
+      content="Blog preview card" />
+    <meta
+      name="author"
+      content="César Conte" />
     <link
       rel="icon"
       type="image/png"
@@ -33,24 +37,31 @@
       <h1 class="visually-hidden">Blog preview card</h1>
     </header>
     <main>
-      <div class="card">
-        <div class="card__image">
-          <img
-            src="./assets/images/illustration-article.svg"
-            alt="HTML and CSS concepts illustration"
-            class="card__img-img" />
-        </div>
+      <article class="card" aria-labelledby="article-title">
+        <img
+          src="./assets/images/illustration-article.svg"
+          alt="HTML and CSS concepts illustration"
+          class="card__main-img" 
+          width="336"
+          height="200" />
 
         <div class="card__content">
-          <div class="card__header">
-              <p class="card__category">Learning</p>
-              <time
-                class="card__publish-date"
-                datetime="2023-12-21"
-                >Published 21 Dec 2023</time
-              >
-          </div>
-          <h2 class="card__title"><abbr title="Hypertext Markup Language">HTML</abbr> & <abbr title="Cascading Style Sheets">CSS</abbr> foundations</h2>
+          <p class="card__category">Learning</p>
+          <time
+            class="card__publish-date"
+            datetime="2023-12-21"
+            >Published 21 Dec 2023</time
+          >
+          <h2 id="article-title" class="card__title">
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="card__title-link"
+              ><abbr title="Hypertext Markup Language">HTML</abbr> &
+              <abbr title="Cascading Style Sheets">CSS</abbr> foundations</a
+            >
+          </h2>
           <p class="card__description">
             These languages are the backbone of every website, defining
             structure, content, and presentation.
@@ -65,8 +76,8 @@
             width="32"
             height="32" />
           <p class="card__author-name">Greg Hooper</p>
-        </he>
-      </div>
+        </div>
+      </article>
     </main>
 
     <footer>
