@@ -117,7 +117,7 @@ main {
 }
 
 /** Card Container **/
-.card {
+.card__article {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -130,7 +130,6 @@ main {
   border: 1px solid var(--gray-950);
   border-radius: var(--border-radius-500);
   box-shadow: var(--shadow);
-  transition: box-shadow var(--transition-default);
 }
 
 /* Card Image */
@@ -211,7 +210,6 @@ footer {
 /* Footer Links */
 footer a {
   color: var(--link-color);
-  text-decoration: none;
   transition: color var(--transition-default);
 }
 
