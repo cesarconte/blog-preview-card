@@ -39,19 +39,19 @@
   --text-preset-3__bold__fixed: 800 0.875rem / 150% var(--font-family);
 
   /* Spacing scale */
-  --spacing-300: 24px;
-  --spacing-150: 12px;
-  --spacing-100: 8px;
-  --spacing-50: 4px;
+  --spacing-300: 1.5rem;
+  --spacing-150: 0.75rem;
+  --spacing-100: 0.5rem;
+  --spacing-50: 0.25rem;
 
   /* Border radius scale */
-  --border-radius-500: 20px;
-  --border-radius-300: 10px;
-  --border-radius-100: 4px;
+  --border-radius-500: 1.25rem;
+  --border-radius-300: 0.625rem;
+  --border-radius-100: 0.25rem;
 
   /* Width scale */
-  --width-300: 384px;
-  --width-100: 327px;
+  --width-300: 24rem;
+  --width-100: 20.438rem;
 
   /* Transition */
   --transition-default: 0.3s ease-in-out;
@@ -83,6 +83,10 @@ img {
 
 a {
   color: inherit;
+  text-decoration: none;
+}
+
+abbr {
   text-decoration: none;
 }
 
@@ -162,7 +166,6 @@ main {
   font: var(--text-preset-3__bold);
 }
 
-.card__publish,
 .card__publish-date {
   font: var(--text-preset-3);
   width: fit-content;
